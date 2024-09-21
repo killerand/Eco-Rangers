@@ -1,0 +1,434 @@
+:root {
+    --rem: 16;
+    --f-white: #fafafa;
+    --sandy-brown: #f1a259;
+    --white-2: white;
+    --white-smoke: #f6f7f9;
+    --white: white;
+    --green: #34ce93;
+    --cadet-blue: #83adb5;
+    --black: #12141d;
+    --black-2: #222;
+    --medium-sea-green: #68c998;
+    --light-dark: #777;
+    --slate-blue: #795bbf;
+    --dark-slate-blue: #2359ff;
+    --sandy-brown-2: #ffb161;
+    --light-coral: #ff7e7c;
+    --dark-turquoise: #5bc7d1;
+    --red: #db0f0c;
+    --white-light: #fff9;
+    --light-gray: #f2f2f2;
+    --dark-sea-green: #87a18f;
+}
+
+body {
+    font-family: Rubik, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    color: var(--black);
+    background-color: var(--white-smoke);
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white); /* Navbar background */
+    color: var(--f-white);
+    width: 100%;
+    height: 80px;
+    padding: 0;
+    position: sticky;
+    top: 0; /* Stick to the top */
+    z-index: 99991;
+    direction: rtl; /* Right-to-left direction */
+    text-align: right; /* Right-aligned text */
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+}
+.newkit-logo.head-logo {
+    width: 70px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+.sticky-navigation {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+.navigation {
+    background-color: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navctrl {
+    display: flex;
+    align-items: center;
+}
+
+.first-part {
+    margin-right: 20px; /* Space between logo and navigation */
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center; /* Center the menu */
+    flex-grow: 1; /* Allow menu to grow and take up space */
+    margin: 0; /* Reset margin */
+}
+
+.nav-link {
+    margin: 0 15px; /* Space between links */
+    color: var(--black); /* Link color */
+    text-decoration: none;
+    padding: 15px 20px; /* Padding for better click area */
+    transition: background-color 0.3s;
+    -webkit-text-fill-color: inherit; /* Text fill color */
+    -webkit-font-smoothing: antialiased; /* Font smoothing */
+}
+
+.nav-link:hover {
+    color: #68c998;
+}
+
+.menu-button-2 {
+    display: none; /* Initially hide mobile menu button */
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Hide navigation links in mobile view */
+    }
+    .menu-button-2 {
+        display: block; /* Show menu button */
+    }
+}
+
+
+.header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #e9ecef; /* Light grey background for header */
+}
+
+.header img {
+    max-width: 100%;
+    height: auto;
+}
+.header {
+    display: flex;
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    padding: 50px 20px; /* Adjust padding */
+    background-color: #ffffff; /* Light grey background for header */
+}
+
+.header img {
+    max-width: 50%; /* Adjust the width of the image */
+    height: auto;
+    width: 500px; /* Adjust the width as needed */
+}
+
+.header div {
+    flex: 1; /* Allow text to take available space */
+    text-align: left; /* Left align the text */
+}
+
+.header h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 3.5rem; /* Adjust the size as needed */
+}
+
+.eco-ranger {
+    color: var(--green); /* Use the defined green color */
+    font-size: inherit; /* Ensure it inherits the size from h1 */
+}
+
+
+.header p {
+    font-size: 1.2rem; /* Paragraph size */
+    line-height: 1.5; /* Optional: for better readability */
+    margin-top: 1rem; /* Space between header and paragraph */
+    
+}
+.cta-button {
+    display: inline-block; /* Ensures the button has block properties */
+    background-color: var(--green); /* Use your green variable */
+    color: #fff; /* Button text color */
+    padding: 10px 20px; /* Space inside the button */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 1rem; /* Space above the button */
+    transition: background-color 0.3s; /* Smooth color transition */
+}
+
+.cta-button:hover {
+    background-color: #68c998; /* Change color on hover */
+}
+
+
+.about {
+    background-color: white; /* Light gray background */
+    background-repeat: no-repeat; /* Prevents the background from repeating */
+    background-position: center; /* Centers the background */
+    padding: 100px; /* Adjusts spacing inside the section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    color: var(--black); /* Ensures text is readable */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effect */
+}
+
+.about-title {
+    color: black; /* Sets the color for the title */
+    font-size: 2.5rem; /* Adjust the size as needed */
+    text-align: center; /* Center the title */
+}
+
+.about-subtitle {
+    font-size: 2rem; /* Set the size for the h3 */
+    text-align: center; /* Center the subtitle */
+    color: var(--green); /* Set color for h3 */
+    text-shadow: #222;
+    margin: 10px 0; /* Add space above and below */
+}
+
+.about-text {
+    text-align: left; /* Align the paragraph text to the left */
+    margin: 20px auto; /* Center the text block */
+    max-width: 800px; /* Limit the width for readability */
+}
+
+/* Styling for timeline items container */
+.timeline-items {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    position: relative;
+}
+
+/* Styling for vertical line */
+.timeline-items::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: var(--main-color);
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
+
+/* Styling for each timeline item */
+.timeline-item {
+    position: relative;
+    width: 50%; /* Ensure items take half the width */
+    margin-bottom: 40px;
+}
+
+/* Alternate items on left and right sides */
+.timeline-item:nth-child(odd) {
+    left: 0; /* Left-aligned */
+    text-align: left;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%; /* Right-aligned */
+    text-align: left;
+}
+
+/* Styling for timeline content */
+.timeline-content {
+    background-color: var(--bg-color);
+    border: 3px solid var(--main-color);
+    padding: 30px 50px;
+    border-radius: 4rem;
+    box-shadow: 0 0 10px var(--main-color);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+/* Styling for timeline icons */
+.timeline-icon {
+    max-width: 100px; /* Adjust as needed */
+    margin-bottom: 15px; /* Adds space between the image and text */
+}
+
+/* Styling for timeline h3 */
+.timeline-content h3 {
+    font-size: 24px;
+    color: black;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Styling for timeline p */
+.timeline-content p {
+    color: black;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    text-align: center;
+}
+
+/* Styling for timeline dots */
+.timeline-dot {
+    height: 21px;
+    width: 21px;
+    background-color: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color);
+    position: absolute;
+    left: calc(50% - 10px);
+    border-radius: 50%;
+    top: 0;
+}
+
+/* Styling for the Values section */
+.values-section {
+    background-color: #f9f9f9; /* Light background */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Title styling */
+.values-title {
+    color: var(--green-color); /* Use your green color */
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Container for the value items */
+.values-container {
+    display: flex;
+    justify-content: space-around; /* Space the items evenly */
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    gap: 20px; /* Add space between the items */
+}
+
+/* Remove the background box, keep only icon and text */
+.value-item {
+    flex: 1 1 30%;
+    text-align: center;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+/* Icon styling */
+.value-icon {
+    max-width: 80px; /* Adjust size */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out; /* Add transition for hover effect */
+    filter: hue-rotate(100deg) saturate(200%); /* Apply green color to icons */
+}
+
+/* Hover effect specifically for the icons */
+.value-icon:hover {
+    transform: scale(1.2); /* Zoom effect on hover */
+}
+
+/* Value title styling */
+.value-item h3 {
+    font-size: 1.8rem;
+    color: var(--green-color); /* Use green for title */
+    margin-bottom: 10px;
+}
+
+/* Value text styling */
+.value-item p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+/* Services Section Styling */
+.services-section {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Title Styling */
+.services-title {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Container for Service Items */
+.services-container {
+    display: flex;
+    justify-content: space-between; /* Evenly space the items */
+    align-items: center;
+    flex-wrap: wrap; /* Ensure items stay in one row on large screens, wrap if screen is small */
+    max-width: 1200px;
+    margin: auto;
+    gap: 20px;
+}
+
+/* Service Item Styling */
+.service-item {
+    flex: 1 1 15%; /* Adjust width per service */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s ease-in-out; /* Add a hover transition */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-item:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Icon Styling */
+.service-icon {
+    max-width: 50px;
+    margin-bottom: 15px;
+}
+
+/* Service Title */
+.service-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Service Description */
+.service-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+.team-member {
+    margin: 10px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #007bff; /* Same as navbar */
+    color: var(--f-white);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
