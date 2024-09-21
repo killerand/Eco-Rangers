@@ -590,3 +590,20 @@ textarea {
     list-style-type: none; /* Remove bullets from list */
     padding: 0; /* Remove default padding */
 }
+
+.footer-links li {
+    display: inline; /* Display links in a row */
+    margin: 0 15px; /* Space between links */
+}
+
+.footer-links a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+/* Hover Effect for Links */
+.footer-links a:hover {
+    color: #34ce93; /* Change color on hover */
+}
+
