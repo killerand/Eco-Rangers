@@ -362,73 +362,231 @@ body {
 }
 /* Services Section Styling */
 .services-section {
-    background-color: #f9f9f9;
-    padding: 50px 20px;
-    text-align: center;
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 50px 20px; /* Top and bottom padding */
+    text-align: center; /* Center text */
 }
 
 /* Title Styling */
 .services-title {
-    color: #333;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
+    color: #333; /* Dark gray text */
+    font-size: 2.5rem; /* Font size for title */
+    margin-bottom: 40px; /* Space below the title */
 }
 
 /* Container for Service Items */
 .services-container {
-    display: flex;
-    justify-content: space-between; /* Evenly space the items */
-    align-items: center;
-    flex-wrap: wrap; /* Ensure items stay in one row on large screens, wrap if screen is small */
-    max-width: 1200px;
-    margin: auto;
-    gap: 20px;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+    max-width: 1200px; /* Maximum width for the container */
+    margin: 0 auto; /* Center the container */
+    gap: 20px; /* Space between items */
+    padding: 0 20px; /* Padding on the sides */
 }
 
 /* Service Item Styling */
 .service-item {
-    flex: 1 1 15%; /* Adjust width per service */
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    color: #fff;
-    transition: transform 0.3s ease-in-out; /* Add a hover transition */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(16.66% - 20px); /* 6 items per row, allowing some margin */
+    padding: 20px; /* Inner padding */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center text */
+    color: #fff; /* White text color */
+    transition: transform 0.3s ease-in-out; /* Hover transition */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
+/* Hover Effect for Service Items */
 .service-item:hover {
     transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 /* Icon Styling */
 .service-icon {
-    max-width: 50px;
-    margin-bottom: 15px;
+    max-width: 50px; /* Maximum width for icons */
+    margin-bottom: 15px; /* Space below icon */
 }
 
 /* Service Title */
 .service-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-size: 1.5rem; /* Font size for service title */
+    margin-bottom: 10px; /* Space below title */
 }
 
 /* Service Description */
 .service-item p {
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 1rem; /* Font size for description */
+    line-height: 1.5; /* Line height for readability */
+}
+
+/* Individual Service Colors */
+.service1 {
+    background-color: #4CAF50; /* Green */
+}
+
+.service2 {
+    background-color: #2196F3; /* Blue */
+}
+
+.service3 {
+    background-color: #FF9800; /* Orange */
+}
+
+.service4 {
+    background-color: #FF5722; /* Deep Orange */
+}
+
+.service5 {
+    background-color: #9C27B0; /* Purple */
+}
+
+.service6 {
+    background-color: #3F51B5; /* Indigo */
 }
 
 
+/* Team Section Styling */
+.team-section {
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 50px 20px; /* Top and bottom padding */
+    text-align: center; /* Center text */
+}
+
+/* Title Styling */
+.team-title {
+    color: #333; /* Dark gray text */
+    font-size: 2.5rem; /* Font size for title */
+    margin-bottom: 40px; /* Space below the title */
+}
+
+/* Container for Team Members */
+.team-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+    flex-wrap: nowrap; /* Prevent wrapping to ensure one row */
+    max-width: 1200px; /* Maximum width for the container */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Team Member Item Styling */
 .team-member {
-    margin: 10px 0;
+    flex: 1; /* Allow each member to take equal space */
+    padding: 20px; /* Inner padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease-in-out; /* Hover transition */
+    background-color: #fff; /* White background for member cards */
+    margin: 0 10px; /* Space between members */
 }
 
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #007bff; /* Same as navbar */
-    color: var(--f-white);
-    position: relative;
-    bottom: 0;
-    width: 100%;
+/* Hover Effect for Team Members */
+.team-member:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Member Image Styling */
+.member-image {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circle shape */
+    margin-bottom: 15px; /* Space below image */
+}
+
+/* Member Name Styling */
+.member-name {
+    font-size: 1.5rem; /* Font size for name */
+    color: #333; /* Dark gray text */
+    margin: 10px 0; /* Space above and below */
+}
+
+/* Member Role Styling */
+.member-role {
+    font-size: 1rem; /* Font size for role */
+    color: #777; /* Light gray text */
+}
+/* Contact Section Styling */
+.contact-section {
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 50px 20px; /* Padding around the section */
+    text-align: center; /* Center the text */
+}
+
+/* Title Styling */
+.contact-title {
+    color: #333; /* Dark gray text */
+    font-size: 2.5rem; /* Font size for title */
+    margin-bottom: 40px; /* Space below the title */
+}
+
+/* Form Styling */
+.contact-form {
+    max-width: 600px; /* Max width for the form */
+    margin: auto; /* Center the form */
+    background: white; /* White background for the form */
+    padding: 30px; /* Inner padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px; /* Space between form groups */
+    text-align: left; /* Align label and input to the left */
+}
+
+/* Label Styling */
+label {
+    font-size: 1rem; /* Font size for labels */
+    color: #555; /* Gray color for labels */
+    display: block; /* Make labels block elements */
+    margin-bottom: 5px; /* Space below labels */
+}
+
+/* Input and Textarea Styling */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Inner padding */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+}
+
+/* Submit Button Styling */
+.submit-button {
+    background-color: var(--green); /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1rem; /* Font size */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+/* Hover Effect for Submit Button */
+.submit-button:hover {
+    background-color: #68c998; /* Darker green on hover */
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333; /* Dark background */
+    color: white; /* White text color */
+    padding: 20px 0; /* Padding above and below */
+    text-align: center; /* Center text */
+}
+
+.footer-content {
+    max-width: 1200px; /* Max width for footer content */
+    margin: auto; /* Center footer content */
+    padding: 0 20px; /* Padding on the sides */
+}
+
+/* Footer Links Styling */
+.footer-links {
+    list-style-type: none; /* Remove bullets from list */
+    padding: 0; /* Remove default padding */
 }
