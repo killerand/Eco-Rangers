@@ -616,16 +616,6 @@ textarea {
     font-size: 14px; /* Font size for copyright */
 }
 
-img {
-   max-width: 100%;
-   height: auto;
-}
-@media only screen and (max-width: 768px) {
-   /* Adjust container sizes, padding, font sizes, etc. for mobile */
-   .some-container {
-       padding: 10px;
-   }
-   .some-large-image {
-       width: 100%; /* Ensures the image resizes for smaller screens */
-   }
+@media screen and (max-width: 600px)
+{
 }
