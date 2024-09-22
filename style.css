@@ -21,28 +21,32 @@
     --light-gray: #f2f2f2;
     --dark-sea-green: #87a18f;
 }
+
+/* Container settings */
 .container {
     width: 80%; /* Adapts to 80% of the available width */
     margin: 0 auto; /* Centers the container */
 }
+
 /* For tablets and smaller devices */
 @media (max-width: 768px) {
     .container {
-        width: 100%; /* Make container full width on smaller screens */
+        width: 100%; /* Full width for smaller screens */
         padding: 10px;
     }
 
     .header {
-        font-size: 1.5rem; /* Adjust font size for smaller screens */
+        font-size: 1.5rem; /* Smaller font for tablets */
     }
 }
 
 /* For phones */
 @media (max-width: 480px) {
     .header {
-        font-size: 1.2rem; /* Even smaller font size on phones */
+        font-size: 1.2rem; /* Even smaller for phones */
     }
 }
+
 .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -50,22 +54,25 @@
 }
 
 .flex-item {
-    flex: 1 1 45%; /* Each item takes up 45% of the container width */
+    flex: 1 1 45%; /* 45% width */
     margin: 10px;
 }
+
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Auto adjusts columns based on screen size */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Auto adjusts columns */
     gap: 10px;
 }
+
+/* Image auto-sizing */
 img {
     max-width: 100%;
     height: auto;
 }
-.element {
-    width: 50%; /* Use percentages to make elements scalable */
-}
 
+.element {
+    width: 50%; /* Use percentages for scalability */
+}
 
 body {
     font-family: Rubik, sans-serif;
@@ -78,594 +85,183 @@ body {
     padding: 0;
 }
 
+/* Navbar styling */
 .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--white); /* Navbar background */
+    background-color: var(--white);
     color: var(--f-white);
     width: 100%;
     height: 80px;
     padding: 0;
     position: sticky;
-    top: 0; /* Stick to the top */
+    top: 0;
     z-index: 99991;
     direction: rtl; /* Right-to-left direction */
-    text-align: right; /* Right-aligned text */
-    -webkit-text-size-adjust: 100%;
+    text-align: right;
     box-sizing: border-box;
 }
+
+/* Logo inside the navbar */
 .newkit-logo.head-logo {
-    width: 70px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 70px;
+    height: auto;
 }
+
+/* Sticky navigation bar */
 .sticky-navigation {
     position: sticky;
     top: 0;
     z-index: 9999;
 }
 
-.navigation {
-    background-color: var(--white);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.header-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.navctrl {
-    display: flex;
-    align-items: center;
-}
-
-.first-part {
-    margin-right: 20px; /* Space between logo and navigation */
-}
-
-.nav-menu {
-    display: flex;
-    justify-content: center; /* Center the menu */
-    flex-grow: 1; /* Allow menu to grow and take up space */
-    margin: 0; /* Reset margin */
-}
-
-.nav-link {
-    margin: 0 15px; /* Space between links */
-    color: var(--black); /* Link color */
-    text-decoration: none;
-    padding: 15px 20px; /* Padding for better click area */
-    transition: background-color 0.3s;
-    -webkit-text-fill-color: inherit; /* Text fill color */
-    -webkit-font-smoothing: antialiased; /* Font smoothing */
-}
-
-.nav-link:hover {
-    color: #68c998;
-}
-
-.menu-button-2 {
-    display: none; /* Initially hide mobile menu button */
-}
-
-/* Media query for mobile view */
-@media (max-width: 768px) {
-    .nav-menu {
-        display: none; /* Hide navigation links in mobile view */
-    }
-    .menu-button-2 {
-        display: block; /* Show menu button */
-    }
-}
-
-
+/* Header styling */
 .header {
     text-align: center;
     padding: 50px 0;
-    background-color: #e9ecef; /* Light grey background for header */
+    background-color: #e9ecef;
 }
 
+/* Header image */
 .header img {
     max-width: 100%;
     height: auto;
 }
+
+/* Header for larger devices */
 .header {
     display: flex;
-    justify-content: space-between; /* Space between items */
-    align-items: center; /* Center items vertically */
-    padding: 50px 20px; /* Adjust padding */
-    background-color: #ffffff; /* Light grey background for header */
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
 }
 
+/* Adjust image size */
 .header img {
-    max-width: 50%; /* Adjust the width of the image */
-    height: auto;
-    width: 500px; /* Adjust the width as needed */
+    max-width: 50%;
+    width: 500px;
 }
 
-.header div {
-    flex: 1; /* Allow text to take available space */
-    text-align: left; /* Left align the text */
-}
-
-.header h1 {
-    margin: 0; /* Remove default margin */
-    font-size: 3.5rem; /* Adjust the size as needed */
-}
-
-.eco-ranger {
-    color: var(--green); /* Use the defined green color */
-    font-size: inherit; /* Ensure it inherits the size from h1 */
-}
-
-
-.header p {
-    font-size: 1.2rem; /* Paragraph size */
-    line-height: 1.5; /* Optional: for better readability */
-    margin-top: 1rem; /* Space between header and paragraph */
-    
-}
+/* CTA Button styling */
 .cta-button {
-    display: inline-block; /* Ensures the button has block properties */
-    background-color: var(--green); /* Use your green variable */
-    color: #fff; /* Button text color */
-    padding: 10px 20px; /* Space inside the button */
-    text-decoration: none; /* Remove underline */
-    border-radius: 5px; /* Rounded corners */
-    margin-top: 1rem; /* Space above the button */
-    transition: background-color 0.3s; /* Smooth color transition */
+    display: inline-block;
+    background-color: var(--green);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
 }
 
-.cta-button:hover {
-    background-color: #68c998; /* Change color on hover */
-}
-
-
+/* About section */
 .about {
-    background-color: white; /* Light gray background */
-    background-repeat: no-repeat; /* Prevents the background from repeating */
-    background-position: center; /* Centers the background */
-    padding: 100px; /* Adjusts spacing inside the section */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    color: var(--black); /* Ensures text is readable */
-    transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effect */
+    background-color: white;
+    padding: 100px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: var(--black);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.about-title {
-    color: black; /* Sets the color for the title */
-    font-size: 2.5rem; /* Adjust the size as needed */
-    text-align: center; /* Center the title */
-}
-
-.about-subtitle {
-    font-size: 2rem; /* Set the size for the h3 */
-    text-align: center; /* Center the subtitle */
-    color: var(--green); /* Set color for h3 */
-    text-shadow: #222;
-    margin: 10px 0; /* Add space above and below */
-}
-
-.about-text {
-    text-align: left; /* Align the paragraph text to the left */
-    margin: 20px auto; /* Center the text block */
-    max-width: 800px; /* Limit the width for readability */
-}
-
-/* Styling for timeline items container */
-.timeline-items {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    position: relative;
-}
-
-/* Styling for vertical line */
-.timeline-items::before {
-    content: "";
-    position: absolute;
-    width: 5px;
-    height: 100%;
-    background: var(--main-color);
-    left: 50%;
-    transform: translateX(-50%);
-    top: 0;
-}
-
-/* Styling for each timeline item */
-.timeline-item {
-    position: relative;
-    width: 50%; /* Ensure items take half the width */
-    margin-bottom: 40px;
-}
-
-/* Alternate items on left and right sides */
-.timeline-item:nth-child(odd) {
-    left: 0; /* Left-aligned */
-    text-align: left;
-}
-
-.timeline-item:nth-child(even) {
-    left: 50%; /* Right-aligned */
-    text-align: left;
-}
-
-/* Styling for timeline content */
-.timeline-content {
-    background-color: var(--bg-color);
-    border: 3px solid var(--main-color);
-    padding: 30px 50px;
-    border-radius: 4rem;
-    box-shadow: 0 0 10px var(--main-color);
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    position: relative;
-    z-index: 2;
-}
-
-.timeline-content:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px var(--main-color);
-}
-
-/* Styling for timeline icons */
-.timeline-icon {
-    max-width: 100px; /* Adjust as needed */
-    margin-bottom: 15px; /* Adds space between the image and text */
-}
-
-/* Styling for timeline h3 */
-.timeline-content h3 {
-    font-size: 24px;
-    color: black;
-    margin: 10px 0;
-    text-align: center;
-}
-
-/* Styling for timeline p */
-.timeline-content p {
-    color: black;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 22px;
-    text-align: center;
-}
-
-/* Styling for timeline dots */
-.timeline-dot {
-    height: 21px;
-    width: 21px;
-    background-color: var(--main-color);
-    box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color);
-    position: absolute;
-    left: calc(50% - 10px);
-    border-radius: 50%;
-    top: 0;
-}
-
-/* Styling for the Values section */
+/* Values section */
 .values-section {
-    background-color: #f9f9f9; /* Light background */
+    background-color: #f9f9f9;
     padding: 50px 20px;
     text-align: center;
 }
 
-/* Title styling */
 .values-title {
-    color: var(--green-color); /* Use your green color */
+    color: var(--green);
     font-size: 2.5rem;
     margin-bottom: 40px;
 }
 
-/* Container for the value items */
 .values-container {
     display: flex;
-    justify-content: space-around; /* Space the items evenly */
+    justify-content: space-around;
     align-items: center;
     max-width: 1200px;
     margin: auto;
-    gap: 20px; /* Add space between the items */
+    gap: 20px;
 }
 
-/* Remove the background box, keep only icon and text */
 .value-item {
     flex: 1 1 30%;
     text-align: center;
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
 }
 
-/* Icon styling */
 .value-icon {
-    max-width: 80px; /* Adjust size */
+    max-width: 80px;
     margin-bottom: 20px;
-    transition: transform 0.3s ease-in-out; /* Add transition for hover effect */
-    filter: hue-rotate(100deg) saturate(200%); /* Apply green color to icons */
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Hover effect specifically for the icons */
-.value-icon:hover {
-    transform: scale(1.2); /* Zoom effect on hover */
-}
-
-/* Value title styling */
-.value-item h3 {
-    font-size: 1.8rem;
-    color: var(--green-color); /* Use green for title */
-    margin-bottom: 10px;
-}
-
-/* Value text styling */
-.value-item p {
-    color: #333;
-    font-size: 1rem;
-    line-height: 1.6;
-}
-/* Services Section Styling */
+/* Service section */
 .services-section {
-    background-color: #f9f9f9; /* Light gray background */
-    padding: 50px 20px; /* Top and bottom padding */
-    text-align: center; /* Center text */
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
 }
 
-/* Title Styling */
 .services-title {
-    color: #333; /* Dark gray text */
-    font-size: 2.5rem; /* Font size for title */
-    margin-bottom: 40px; /* Space below the title */
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
 }
 
-/* Container for Service Items */
 .services-container {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space items evenly */
-    align-items: center; /* Center items vertically */
-    max-width: 1200px; /* Maximum width for the container */
-    margin: 0 auto; /* Center the container */
-    gap: 20px; /* Space between items */
-    padding: 0 20px; /* Padding on the sides */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
 }
 
-/* Service Item Styling */
-.service-item {
-    flex: 1 1 calc(16.66% - 20px); /* 6 items per row, allowing some margin */
-    padding: 20px; /* Inner padding */
-    border-radius: 10px; /* Rounded corners */
-    text-align: center; /* Center text */
-    color: #fff; /* White text color */
-    transition: transform 0.3s ease-in-out; /* Hover transition */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+/* Timeline styling */
+.timeline-items {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Hover Effect for Service Items */
-.service-item:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
+.timeline-item {
+    position: relative;
+    width: 50%;
+    margin-bottom: 40px;
 }
 
-/* Icon Styling */
-.service-icon {
-    max-width: 50px; /* Maximum width for icons */
-    margin-bottom: 15px; /* Space below icon */
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: left;
 }
 
-/* Service Title */
-.service-item h3 {
-    font-size: 1.5rem; /* Font size for service title */
-    margin-bottom: 10px; /* Space below title */
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
 }
 
-/* Service Description */
-.service-item p {
-    font-size: 1rem; /* Font size for description */
-    line-height: 1.5; /* Line height for readability */
+.timeline-content {
+    background-color: var(--bg-color);
+    padding: 30px 50px;
+    border-radius: 4rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 
-/* Individual Service Colors */
-.service1 {
-    background-color: #4CAF50; /* Green */
+/* Responsive navbar menu button */
+.menu-button-2 {
+    display: none;
 }
 
-.service2 {
-    background-color: #2196F3; /* Blue */
-}
-
-.service3 {
-    background-color: #FF9800; /* Orange */
-}
-
-.service4 {
-    background-color: #FF5722; /* Deep Orange */
-}
-
-.service5 {
-    background-color: #9C27B0; /* Purple */
-}
-
-.service6 {
-    background-color: #3F51B5; /* Indigo */
-}
-
-
-/* Team Section Styling */
-.team-section {
-    background-color: #f9f9f9; /* Light gray background */
-    padding: 50px 20px; /* Top and bottom padding */
-    text-align: center; /* Center text */
-}
-
-/* Title Styling */
-.team-title {
-    color: #333; /* Dark gray text */
-    font-size: 2.5rem; /* Font size for title */
-    margin-bottom: 40px; /* Space below the title */
-}
-
-/* Container for Team Members */
-.team-container {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space items evenly */
-    align-items: center; /* Center items vertically */
-    flex-wrap: nowrap; /* Prevent wrapping to ensure one row */
-    max-width: 1200px; /* Maximum width for the container */
-    margin: 0 auto; /* Center the container */
-}
-
-/* Team Member Item Styling */
-.team-member {
-    flex: 1; /* Allow each member to take equal space */
-    padding: 20px; /* Inner padding */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: transform 0.3s ease-in-out; /* Hover transition */
-    background-color: #fff; /* White background for member cards */
-    margin: 0 10px; /* Space between members */
-}
-
-/* Hover Effect for Team Members */
-.team-member:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-}
-
-/* Member Image Styling */
-.member-image {
-    width: 100%; /* Full width */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Circle shape */
-    margin-bottom: 15px; /* Space below image */
-}
-
-/* Member Name Styling */
-.member-name {
-    font-size: 1.5rem; /* Font size for name */
-    color: #333; /* Dark gray text */
-    margin: 10px 0; /* Space above and below */
-}
-
-/* Member Role Styling */
-.member-role {
-    font-size: 1rem; /* Font size for role */
-    color: #777; /* Light gray text */
-}
-/* Contact Section Styling */
-.contact-section {
-    background-color: #f9f9f9; /* Light gray background */
-    padding: 50px 20px; /* Padding around the section */
-    text-align: center; /* Center the text */
-}
-
-/* Title Styling */
-.contact-title {
-    color: #333; /* Dark gray text */
-    font-size: 2.5rem; /* Font size for title */
-    margin-bottom: 40px; /* Space below the title */
-}
-
-/* Form Styling */
-.contact-form {
-    max-width: 600px; /* Max width for the form */
-    margin: auto; /* Center the form */
-    background: white; /* White background for the form */
-    padding: 30px; /* Inner padding */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-/* Form Group Styling */
-.form-group {
-    margin-bottom: 20px; /* Space between form groups */
-    text-align: left; /* Align label and input to the left */
-}
-
-/* Label Styling */
-label {
-    font-size: 1rem; /* Font size for labels */
-    color: #555; /* Gray color for labels */
-    display: block; /* Make labels block elements */
-    margin-bottom: 5px; /* Space below labels */
-}
-
-/* Input and Textarea Styling */
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%; /* Full width */
-    padding: 10px; /* Inner padding */
-    border: 1px solid #ccc; /* Border color */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 1rem; /* Font size */
-}
-
-/* Submit Button Styling */
-.submit-button {
-    background-color: var(--green); /* Green background */
-    color: white; /* White text */
-    padding: 10px 20px; /* Padding */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 1rem; /* Font size */
-    transition: background-color 0.3s ease; /* Transition for hover effect */
-}
-
-/* Hover Effect for Submit Button */
-.submit-button:hover {
-    background-color: #68c998; /* Darker green on hover */
-}
-
-/* Footer Styling */
-.footer {
-    background-color: #2c2c2c; /* Dark gray background */
-    color: #f9f9f9; /* Light text color */
-    padding: 20px 0; /* Padding above and below */
-    text-align: center; /* Center text */
-}
-
-/* Social Media Icons Styling */
-.social {
-    margin-bottom: 15px; /* Space below the social icons */
-}
-
-.social a {
-    color: #34ce93; /* Green color for icons */
-    font-size: 24px; /* Size of icons */
-    margin: 0 10px; /* Space between icons */
-    transition: color 0.3s; /* Transition for hover effect */
-}
-
-.social a:hover {
-    color: #fff; /* Change to white on hover */
-}
-
-/* Navigation Links Styling */
-.list {
-    list-style-type: none; /* Remove bullets from list */
-    padding: 0; /* Remove default padding */
-    margin: 15px 0; /* Space above and below the list */
-}
-
-.list li {
-    display: inline; /* Display links in a row */
-    margin: 0 15px; /* Space between links */
-}
-
-.list a {
-    color: #34ce93; /* Green color for links */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s; /* Transition for hover effect */
-}
-
-.list a:hover {
-    color: #fff; /* Change to white on hover */
-}
-
-/* Footer Copyright Styling */
-.copyright {
-    margin-top: 15px; /* Space above the copyright text */
-    font-size: 14px; /* Font size for copyright */
+@media (max-width: 768px) {
+    .menu-button-2 {
+        display: block;
+    }
 }
 
 
