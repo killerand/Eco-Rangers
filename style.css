@@ -117,22 +117,19 @@ body {
 }
 
 
-.header {
+./* General Header Styling */
+header {
     text-align: center;
     padding: 50px 0;
     background-color: #e9ecef; /* Light grey background for header */
 }
 
-.header img {
-    max-width: 100%;
-    height: auto;
-}
 .header {
     display: flex;
     justify-content: space-between; /* Space between items */
     align-items: center; /* Center items vertically */
     padding: 50px 20px; /* Adjust padding */
-    background-color: #ffffff; /* Light grey background for header */
+    background-color: #ffffff; /* White background for header */
 }
 
 .header img {
@@ -156,13 +153,12 @@ body {
     font-size: inherit; /* Ensure it inherits the size from h1 */
 }
 
-
 .header p {
     font-size: 1.2rem; /* Paragraph size */
     line-height: 1.5; /* Optional: for better readability */
     margin-top: 1rem; /* Space between header and paragraph */
-    
 }
+
 .cta-button {
     display: inline-block; /* Ensures the button has block properties */
     background-color: var(--green); /* Use your green variable */
@@ -176,6 +172,48 @@ body {
 
 .cta-button:hover {
     background-color: #68c998; /* Change color on hover */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center text and image */
+    }
+
+    .header img {
+        max-width: 80%; /* Reduce image size for mobile */
+        width: auto; /* Allow flexible width */
+        margin-bottom: 20px; /* Space below the image */
+    }
+
+    .header h1 {
+        font-size: 2.5rem; /* Reduce font size for mobile */
+    }
+
+    .header p {
+        font-size: 1rem; /* Reduce paragraph size */
+    }
+
+    .cta-button {
+        margin-top: 20px; /* Add space above the button */
+        font-size: 1rem; /* Adjust button font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 2rem; /* Further reduce font size for smaller screens */
+    }
+
+    .header p {
+        font-size: 0.9rem; /* Smaller paragraph text */
+    }
+
+    .cta-button {
+        font-size: 0.9rem; /* Smaller button text */
+        padding: 8px 16px; /* Adjust button padding */
+    }
 }
 
 
