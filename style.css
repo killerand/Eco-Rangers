@@ -573,37 +573,54 @@ textarea {
 
 /* Footer Styling */
 .footer {
-    background-color: #333; /* Dark background */
-    color: white; /* White text color */
+    background-color: #2c2c2c; /* Dark gray background */
+    color: #f9f9f9; /* Light text color */
     padding: 20px 0; /* Padding above and below */
     text-align: center; /* Center text */
 }
 
-.footer-content {
-    max-width: 1200px; /* Max width for footer content */
-    margin: auto; /* Center footer content */
-    padding: 0 20px; /* Padding on the sides */
+/* Social Media Icons Styling */
+.social {
+    margin-bottom: 15px; /* Space below the social icons */
 }
 
-/* Footer Links Styling */
-.footer-links {
+.social a {
+    color: #34ce93; /* Green color for icons */
+    font-size: 24px; /* Size of icons */
+    margin: 0 10px; /* Space between icons */
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+.social a:hover {
+    color: #fff; /* Change to white on hover */
+}
+
+/* Navigation Links Styling */
+.list {
     list-style-type: none; /* Remove bullets from list */
     padding: 0; /* Remove default padding */
+    margin: 15px 0; /* Space above and below the list */
 }
 
-.footer-links li {
+.list li {
     display: inline; /* Display links in a row */
     margin: 0 15px; /* Space between links */
 }
 
-.footer-links a {
-    color: white; /* Link color */
+.list a {
+    color: #34ce93; /* Green color for links */
     text-decoration: none; /* Remove underline */
     transition: color 0.3s; /* Transition for hover effect */
 }
 
-/* Hover Effect for Links */
-.footer-links a:hover {
-    color: #34ce93; /* Change color on hover */
+.list a:hover {
+    color: #fff; /* Change to white on hover */
 }
+
+/* Footer Copyright Styling */
+.copyright {
+    margin-top: 15px; /* Space above the copyright text */
+    font-size: 14px; /* Font size for copyright */
+}
+
 
