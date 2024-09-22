@@ -117,19 +117,22 @@ body {
 }
 
 
-./* General Header Styling */
-header {
+.header {
     text-align: center;
     padding: 50px 0;
     background-color: #e9ecef; /* Light grey background for header */
 }
 
+.header img {
+    max-width: 100%;
+    height: auto;
+}
 .header {
     display: flex;
     justify-content: space-between; /* Space between items */
     align-items: center; /* Center items vertically */
     padding: 50px 20px; /* Adjust padding */
-    background-color: #ffffff; /* White background for header */
+    background-color: #ffffff; /* Light grey background for header */
 }
 
 .header img {
@@ -153,12 +156,13 @@ header {
     font-size: inherit; /* Ensure it inherits the size from h1 */
 }
 
+
 .header p {
     font-size: 1.2rem; /* Paragraph size */
     line-height: 1.5; /* Optional: for better readability */
     margin-top: 1rem; /* Space between header and paragraph */
+    
 }
-
 .cta-button {
     display: inline-block; /* Ensures the button has block properties */
     background-color: var(--green); /* Use your green variable */
@@ -172,48 +176,6 @@ header {
 
 .cta-button:hover {
     background-color: #68c998; /* Change color on hover */
-}
-
-/* Media Queries for Responsive Design */
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column; /* Stack items vertically */
-        text-align: center; /* Center text and image */
-    }
-
-    .header img {
-        max-width: 80%; /* Reduce image size for mobile */
-        width: auto; /* Allow flexible width */
-        margin-bottom: 20px; /* Space below the image */
-    }
-
-    .header h1 {
-        font-size: 2.5rem; /* Reduce font size for mobile */
-    }
-
-    .header p {
-        font-size: 1rem; /* Reduce paragraph size */
-    }
-
-    .cta-button {
-        margin-top: 20px; /* Add space above the button */
-        font-size: 1rem; /* Adjust button font size */
-    }
-}
-
-@media (max-width: 480px) {
-    .header h1 {
-        font-size: 2rem; /* Further reduce font size for smaller screens */
-    }
-
-    .header p {
-        font-size: 0.9rem; /* Smaller paragraph text */
-    }
-
-    .cta-button {
-        font-size: 0.9rem; /* Smaller button text */
-        padding: 8px 16px; /* Adjust button padding */
-    }
 }
 
 
@@ -475,24 +437,6 @@ header {
     background-color: #3F51B5; /* Indigo */
 }
 
-/* Responsive Styles */
-@media (max-width: 1200px) {
-    .service-item {
-        flex: 1 1 calc(33.33% - 20px); /* 3 items per row */
-    }
-}
-
-@media (max-width: 768px) {
-    .service-item {
-        flex: 1 1 calc(50% - 20px); /* 2 items per row */
-    }
-}
-
-@media (max-width: 480px) {
-    .service-item {
-        flex: 1 1 100%; /* 1 item per row */
-    }
-}
 
 /* Team Section Styling */
 .team-section {
@@ -513,20 +457,20 @@ header {
     display: flex; /* Use flexbox for layout */
     justify-content: space-between; /* Space items evenly */
     align-items: center; /* Center items vertically */
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    flex-wrap: nowrap; /* Prevent wrapping to ensure one row */
     max-width: 1200px; /* Maximum width for the container */
     margin: 0 auto; /* Center the container */
 }
 
 /* Team Member Item Styling */
 .team-member {
-    flex: 1 1 calc(20% - 20px); /* 5 items per row, allowing margin */
+    flex: 1; /* Allow each member to take equal space */
     padding: 20px; /* Inner padding */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     transition: transform 0.3s ease-in-out; /* Hover transition */
     background-color: #fff; /* White background for member cards */
-    margin: 10px; /* Space between members */
+    margin: 0 10px; /* Space between members */
 }
 
 /* Hover Effect for Team Members */
@@ -553,25 +497,6 @@ header {
 .member-role {
     font-size: 1rem; /* Font size for role */
     color: #777; /* Light gray text */
-}
-
-/* Responsive Styles */
-@media (max-width: 1200px) {
-    .team-member {
-        flex: 1 1 calc(33.33% - 20px); /* 3 items per row */
-    }
-}
-
-@media (max-width: 768px) {
-    .team-member {
-        flex: 1 1 calc(50% - 20px); /* 2 items per row */
-    }
-}
-
-@media (max-width: 480px) {
-    .team-member {
-        flex: 1 1 100%; /* 1 item per row */
-    }
 }
 /* Contact Section Styling */
 .contact-section {
@@ -639,33 +564,6 @@ textarea {
     background-color: #68c998; /* Darker green on hover */
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .contact-title {
-        font-size: 2rem; /* Smaller font size for title */
-    }
-
-    .contact-form {
-        padding: 20px; /* Reduced padding for smaller screens */
-    }
-
-    input[type="text"],
-    input[type="email"],
-    textarea {
-        font-size: 0.9rem; /* Smaller font size for inputs */
-    }
-
-    .submit-button {
-        font-size: 0.9rem; /* Smaller font size for button */
-    }
-}
-
-@media (max-width: 480px) {
-    .contact-title {
-        font-size: 1.8rem; /* Even smaller font size for title */
-    }
-}
-
 /* Footer Styling */
 .footer {
     background-color: #2c2c2c; /* Dark gray background */
@@ -718,21 +616,4 @@ textarea {
     font-size: 14px; /* Font size for copyright */
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .social a {
-        font-size: 20px; /* Slightly smaller icons on smaller screens */
-        margin: 0 5px; /* Reduced space between icons */
-    }
 
-    .list li {
-        display: block; /* Stack links vertically */
-        margin: 10px 0; /* Space between links */
-    }
-}
-
-@media (max-width: 480px) {
-    .copyright {
-        font-size: 12px; /* Smaller font size for copyright on mobile */
-    }
-}
