@@ -475,6 +475,24 @@ header {
     background-color: #3F51B5; /* Indigo */
 }
 
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .service-item {
+        flex: 1 1 calc(33.33% - 20px); /* 3 items per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .service-item {
+        flex: 1 1 calc(50% - 20px); /* 2 items per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-item {
+        flex: 1 1 100%; /* 1 item per row */
+    }
+}
 
 /* Team Section Styling */
 .team-section {
@@ -495,20 +513,20 @@ header {
     display: flex; /* Use flexbox for layout */
     justify-content: space-between; /* Space items evenly */
     align-items: center; /* Center items vertically */
-    flex-wrap: nowrap; /* Prevent wrapping to ensure one row */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
     max-width: 1200px; /* Maximum width for the container */
     margin: 0 auto; /* Center the container */
 }
 
 /* Team Member Item Styling */
 .team-member {
-    flex: 1; /* Allow each member to take equal space */
+    flex: 1 1 calc(20% - 20px); /* 5 items per row, allowing margin */
     padding: 20px; /* Inner padding */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     transition: transform 0.3s ease-in-out; /* Hover transition */
     background-color: #fff; /* White background for member cards */
-    margin: 0 10px; /* Space between members */
+    margin: 10px; /* Space between members */
 }
 
 /* Hover Effect for Team Members */
@@ -535,6 +553,25 @@ header {
 .member-role {
     font-size: 1rem; /* Font size for role */
     color: #777; /* Light gray text */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .team-member {
+        flex: 1 1 calc(33.33% - 20px); /* 3 items per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .team-member {
+        flex: 1 1 calc(50% - 20px); /* 2 items per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .team-member {
+        flex: 1 1 100%; /* 1 item per row */
+    }
 }
 /* Contact Section Styling */
 .contact-section {
@@ -602,6 +639,33 @@ textarea {
     background-color: #68c998; /* Darker green on hover */
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-title {
+        font-size: 2rem; /* Smaller font size for title */
+    }
+
+    .contact-form {
+        padding: 20px; /* Reduced padding for smaller screens */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 0.9rem; /* Smaller font size for inputs */
+    }
+
+    .submit-button {
+        font-size: 0.9rem; /* Smaller font size for button */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-title {
+        font-size: 1.8rem; /* Even smaller font size for title */
+    }
+}
+
 /* Footer Styling */
 .footer {
     background-color: #2c2c2c; /* Dark gray background */
@@ -653,29 +717,23 @@ textarea {
     margin-top: 15px; /* Space above the copyright text */
     font-size: 14px; /* Font size for copyright */
 }
-/* Add mobile responsiveness */
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .nav-menu {
-        display: none; /* Hide the navigation links on mobile */
-        flex-direction: column;
-        background-color: #fff;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        padding: 20px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    .social a {
+        font-size: 20px; /* Slightly smaller icons on smaller screens */
+        margin: 0 5px; /* Reduced space between icons */
     }
 
-    .nav-menu.active {
-        display: flex;
-    }
-
-    .menu-button-2 {
-        display: block; /* Show menu button on mobile */
-    }
-
-    .header {
-        flex-direction: column;
+    .list li {
+        display: block; /* Stack links vertically */
+        margin: 10px 0; /* Space between links */
     }
 }
+
+@media (max-width: 480px) {
+    .copyright {
+        font-size: 12px; /* Smaller font size for copyright on mobile */
+    }
+}
+
