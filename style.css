@@ -623,156 +623,26 @@ textarea {
         line-height: 50px;
     }
 }
-@media(max-width:1200px){
-    html{
-        font-size: 55%;
-    }
-    .about-container{
-        padding-bottom: 7rem;
-        grid-template-columns: repeat(2,1fr);
-        margin: 0 5rem;
-    }
+img {
+   max-width: 100%;
+   height: auto;
 }
-@media(max-width:991px){
-    header{
-        padding: 2rem 3%;
-    }
-    section{
-        padding: 2rem 3%;
-    }
-    .timeline-items::before{
-        left: 7px;
-    }
-    .timeline-item:nth-child(odd){
-        padding: 0;
-        text-align: left;
-    }
-    .timeline-item:nth-child(odd)
-    .timeline-item:nth-child(even){
-        padding-left: 37%;
-    }
-    .timeline-dot{
-        left: 0;
-    }
-    .about{
-        padding-bottom: 7rem;
-    }
-    .testimonials .wrapper{
-        grid-template-columns: repeat(1,1fr);
-    }
-    .contact form{
-        flex-direction: column;
-    }
-    .footer{
-        padding: 2rem 3%;
-    }
-    .work {
-       flex-direction: row; /* or any other valid value */
-    width: 2rem; /* Set the width of flex items */
-    height: 3%; /* Set the height of flex items */
-    }
-    }
-  
-
-@media (max-width: 1024px) {
-    #menu-icon {
-        display: block;
-    }
-    .navbar {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 50%;
-        padding: 1rem 3rem;
-        background-color: rgba(0, 0, 0, 0.8);
-        border-left: 2px solid var(--main-color);
-        border-bottom: 2px solid var(--main-color);
-        border-bottom-left-radius: 2rem;
-        display: none;
-    }
-    .navbar a {
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-        color: var(--text-color);
-    }
-    .navbar.active {
-        display: block;
-    }
-    .home {
-        flex-direction: column-reverse;
-        margin: 5rem 0;
-        gap: 5rem;
-    }
-    .home-img img {
-        width: 52vw;
-    }
-    .about {
-        flex-direction: column-reverse;
-        text-align: center;
-    }  
-    .about h2 {
-        text-align: center;
-        margin: 2rem 0;
-    }
-    .about img {
-        width: 52vw;
-    }
-    .contactform {
-        flex-direction: column;
-    }
-    
+@media only screen and (max-width: 768px) {
+   /* Adjust container sizes, padding, font sizes, etc. for mobile */
+   .some-container {
+       padding: 10px;
+   }
+   .some-large-image {
+       width: 100%; /* Ensures the image resizes for smaller screens */
+   }
 }
-@media(max-width:1285px){
-    html{
-        font-size: 55%;
-    }
-    .about-container{
-        padding-bottom: 7rem;
-        grid-template-columns: repeat(2,1fr);
-        margin: 0 5rem;
-    }
+.container {
+   width: 100%; /* Ensures containers fit within the screen */
+   max-width: 100vw; /* Prevents containers from exceeding the viewport width */
 }
-@media(max-width:991px){
-    header{
-        padding: 2rem 3%;
-    }
-    section{
-        padding: 10rem 3% 2rem;
-    }
-    .timeline-items::before {
-        left: 0; /* Adjusted to align with the dot */
-    }
-    .timeline-date {
-        position: absolute; /* Position above the container */
-        top: -30px; /* Adjust this value as needed */
-    }
-    .timeline-item {
-        display: flex; /* Aligns the container with the dot */
-    }
-
-    .timeline-dot {
-        left: 0; /* Aligns the dot with the left edge of the container */
-    }
-
-    .timeline-item:nth-child(odd) {
-        padding-left: 37px; /* Adjusted padding for odd-numbered items */
-    }
-
-    .timeline-item:nth-child(even) {
-        padding-left: 0; /* No padding for even-numbered items */
-    }
-    .about .about-container{
-        grid-template-columns: repeat(1,1fr);
-    }
-    .work .wrapper{
-        grid-template-columns: repeat(1,1fr);
-    }
-    .contact form{
-        flex-direction: column;
-    }
-    .footer{
-        padding: 2rem 3%;
-        
-    }
+@media only screen and (max-width: 768px) {
+   .some-element {
+       margin-left: 0;
+       padding-left: 0;
+   }
 }
