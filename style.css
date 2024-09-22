@@ -615,3 +615,29 @@ textarea {
     margin-top: 15px; /* Space above the copyright text */
     font-size: 14px; /* Font size for copyright */
 }
+/* Add mobile responsiveness */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Hide the navigation links on mobile */
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .menu-button-2 {
+        display: block; /* Show menu button on mobile */
+    }
+
+    .header {
+        flex-direction: column;
+    }
+}
